@@ -135,7 +135,7 @@
               <!-- Панель действий -->
               <div class="flex items-center space-x-3">
                 <!-- Действия с выбранными -->
-                <div v-if="selectedUsers.length > 0" class="flex items-center space-x-2">
+                <div class="flex items-center space-x-2">
                   <span class="text-sm text-gray-600">
                     Выбрано: {{ selectedUsers.length }}
                   </span>
@@ -147,20 +147,18 @@
 
                   <UButton @click="unblockUsers" :disabled="loading" color="success" variant="soft" size="sm">
                     <UIcon name="i-heroicons-lock-open" class="mr-1" />
-                    Разблокировать
                   </UButton>
 
                   <UButton @click="deleteUsers" :disabled="loading" color="error" variant="outline" size="sm">
                     <UIcon name="i-heroicons-trash" class="mr-1" />
-                    Удалить
                   </UButton>
                 </div>
 
                 <!-- Общие действия -->
-                <UButton @click="deleteUnverifiedUsers" :disabled="loading" color="warning" variant="soft" size="sm">
+                <!-- <UButton @click="deleteUnverifiedUsers" :disabled="loading" color="warning" variant="soft" size="sm">
                   <UIcon name="i-heroicons-user-minus" class="mr-1" />
                   Очистить неподтвержденных
-                </UButton>
+                </UButton> -->
 
                 <UButton @click="refreshUsers" :disabled="loading" variant="outline" size="sm">
                   <UIcon name="i-heroicons-arrow-path" class="mr-1" />

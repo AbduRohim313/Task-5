@@ -67,7 +67,7 @@
                   </div>
                   <div class="ml-4">
                     <p class="text-sm font-medium text-gray-500">Всего пользователей</p>
-                    <p class="text-2xl font-semibold text-gray-900">{{ stats.total }}</p>
+                    <p class="text-2xl font-semibold text-gray-200">{{ stats.total }}</p>
                   </div>
                 </div>
               </template>
@@ -84,7 +84,7 @@
                   </div>
                   <div class="ml-4">
                     <p class="text-sm font-medium text-gray-500">Активные</p>
-                    <p class="text-2xl font-semibold text-gray-900">{{ stats.active }}</p>
+                    <p class="text-2xl font-semibold text-gray-200">{{ stats.active }}</p>
                   </div>
                 </div>
               </template>
@@ -101,7 +101,7 @@
                   </div>
                   <div class="ml-4">
                     <p class="text-sm font-medium text-gray-500">Заблокированные</p>
-                    <p class="text-2xl font-semibold text-gray-900">{{ stats.blocked }}</p>
+                    <p class="text-2xl font-semibold text-gray-200">{{ stats.blocked }}</p>
                   </div>
                 </div>
               </template>
@@ -118,7 +118,7 @@
                   </div>
                   <div class="ml-4">
                     <p class="text-sm font-medium text-gray-500">Неподтвержденные</p>
-                    <p class="text-2xl font-semibold text-gray-900">{{ stats.unverified }}</p>
+                    <p class="text-2xl font-semibold text-gray-200">{{ stats.unverified }}</p>
                   </div>
                 </div>
               </template>

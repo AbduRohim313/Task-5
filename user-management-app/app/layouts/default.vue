@@ -14,21 +14,13 @@
             <!-- Обратите внимание: Информация о текущем пользователе -->
             <div class="flex items-center space-x-2">
               <span class="text-sm text-gray-700">{{ user.name }}</span>
-              <UBadge
-                :color="getStatusColor(user.status)"
-                variant="subtle"
-              >
+              <UBadge :color="getStatusColor(user.status)" variant="subtle">
                 {{ getStatusText(user.status) }}
               </UBadge>
             </div>
 
             <!-- Полезно: Кнопка выхода -->
-            <UButton
-              @click="logout"
-              variant="ghost"
-              size="sm"
-              icon="i-heroicons-arrow-right-on-rectangle"
-            >
+            <UButton @click="logout" variant="ghost" size="sm" icon="i-heroicons-arrow-right-on-rectangle">
               Выйти
             </UButton>
           </div>
@@ -47,6 +39,9 @@
 </template>
 
 <script setup lang="ts">
+import { useAuth } from '~~/composables/useAuth'
+
+
 // Полезно: Получаем состояние аутентификации
 const { user, logout } = useAuth()
 

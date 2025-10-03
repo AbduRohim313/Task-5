@@ -142,6 +142,8 @@
 </template>
 
 <script setup lang="ts">
+import { useAuth } from '~~/composables/useAuth'
+
 // Настройка страницы
 definePageMeta({
   layout: false

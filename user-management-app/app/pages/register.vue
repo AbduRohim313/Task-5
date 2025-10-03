@@ -35,25 +35,27 @@
                 <!-- Имя пользователя -->
                 <UFormGroup label="Полное имя" name="name" required>
                   <UInput v-model="state.name" type="text" placeholder="Введите ваше имя" autocomplete="name"
-                    :disabled="loading" size="lg" icon="i-heroicons-user" />
+                    :disabled="loading" size="lg" icon="i-heroicons-user" class="w-full" />
                 </UFormGroup>
 
                 <!-- Email -->
                 <UFormGroup label="Email адрес" name="email" required>
                   <UInput v-model="state.email" type="email" placeholder="your@email.com" autocomplete="email"
-                    :disabled="loading" size="lg" icon="i-heroicons-envelope" />
+                    :disabled="loading" size="lg" icon="i-heroicons-envelope" class="w-full" />
                 </UFormGroup>
 
                 <!-- Пароль -->
                 <UFormGroup label="Пароль" name="password" required>
                   <UInput v-model="state.password" type="password" placeholder="Придумайте надежный пароль"
-                    autocomplete="new-password" :disabled="loading" size="lg" icon="i-heroicons-lock-closed" />
+                    autocomplete="new-password" :disabled="loading" size="lg" icon="i-heroicons-lock-closed"
+                    class="w-full" />
                 </UFormGroup>
 
                 <!-- Подтверждение пароля -->
                 <UFormGroup label="Подтверждение пароля" name="confirmPassword" required>
                   <UInput v-model="state.confirmPassword" type="password" placeholder="Повторите пароль"
-                    autocomplete="new-password" :disabled="loading" size="lg" icon="i-heroicons-lock-closed" />
+                    autocomplete="new-password" :disabled="loading" size="lg" icon="i-heroicons-lock-closed"
+                    class="w-full" />
                 </UFormGroup>
 
                 <!-- Соглашение -->
@@ -139,6 +141,7 @@
 
 <script setup lang="ts">
 import { z } from 'zod'
+import { useAuth } from '~~/composables/useAuth'
 
 // Настройка страницы
 definePageMeta({

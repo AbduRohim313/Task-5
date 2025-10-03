@@ -34,12 +34,13 @@
               <UForm :schema="schema" :state="state" @submit="onSubmit" class="form-container">
                 <UFormGroup label="Email адрес" name="email" required>
                   <UInput v-model="state.email" type="email" placeholder="your@email.com" autocomplete="email"
-                    :disabled="loading" size="lg" icon="i-heroicons-envelope" />
+                    :disabled="loading" size="lg" icon="i-heroicons-envelope" class="w-full" />
                 </UFormGroup>
 
                 <UFormGroup label="Пароль" name="password" required>
                   <UInput v-model="state.password" type="password" placeholder="Введите пароль"
-                    autocomplete="current-password" :disabled="loading" size="lg" icon="i-heroicons-lock-closed" />
+                    autocomplete="current-password" :disabled="loading" size="lg" icon="i-heroicons-lock-closed"
+                    class="w-full" />
                 </UFormGroup>
 
                 <UButton type="submit" block size="lg" :loading="loading" :disabled="loading"
@@ -84,6 +85,7 @@
 
 <script setup lang="ts">
 import { z } from 'zod'
+import { useAuth } from '~~/composables/useAuth'
 
 // Настройка страницы
 definePageMeta({

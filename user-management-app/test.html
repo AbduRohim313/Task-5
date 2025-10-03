@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тест универсальных стилей</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <div class="page-layout">
+      <!-- Навигация -->
+      <nav class="universal-nav">
+        <div class="nav-brand">
+          <span class="brand-logo">📋</span>
+          <span class="brand-text">Управление пользователями</span>
+        </div>
+        <div class="nav-links">
+          <a href="#" class="nav-link">Главная</a>
+          <a href="#" class="nav-link">Вход</a>
+          <a href="#" class="nav-link">Регистрация</a>
+        </div>
+      </nav>
+
+      <!-- Основной контент -->
+      <main class="page-content">
+        <div class="bg-primary-gradient">
+          <div class="card-glass">
+            <h1 class="gradient-text">Тест универсальных стилей</h1>
+            <p>Этот файл демонстрирует универсальные CSS стили для всех страниц в /pages.</p>
+
+            <div class="space-y-4">
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-input" placeholder="Введите email" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Пароль</label>
+                <input type="password" class="form-input" placeholder="Введите пароль" />
+              </div>
+
+              <button class="btn-primary">Войти</button>
+              <button class="btn-secondary">Отмена</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="universal-footer">
+        <p>&copy; 2025 Система управления пользователями</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -3,12 +3,14 @@
 ## 1. Создать продакшн базу данных:
 
 ### Варианты:
+
 - **Neon.tech** (рекомендуется для Netlify)
-- **Supabase** 
+- **Supabase**
 - **Railway**
 - **PlanetScale**
 
 ### Пример с Neon.tech:
+
 1. Зайти на https://neon.tech
 2. Создать новый проект
 3. Скопировать Connection String
@@ -19,7 +21,7 @@
 # База данных (обязательно)
 DATABASE_URL=postgresql://username:password@host/database?sslmode=require
 
-# JWT (обязательно) 
+# JWT (обязательно)
 JWT_SECRET=your_super_long_secure_jwt_secret_key_here_minimum_32_chars
 
 # Email (опционально)

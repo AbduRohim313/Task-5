@@ -8,6 +8,11 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
 
+  // Настройки для Netlify deployment
+  nitro: {
+    preset: 'netlify'
+  },
+
   runtimeConfig: {
     // Переменные для сервера
     jwtSecret: process.env.JWT_SECRET || 'your-secret-key',

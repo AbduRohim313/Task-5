@@ -5,9 +5,18 @@ export default defineEventHandler(async (event) => {
   // Важно: Применяем middleware только к защищенным маршрутам
   const url = getRequestURL(event)
   const protectedRoutes = ['/api/users', '/api/admin']
+  
+  // Исключаем auth маршруты из проверки
+  const authRoutes = ['/api/auth/', '/api/email/']
+  
+  const isAuthRoute = authRoutes.some(route => url.pathname.includes(route))
+  
+  if (isAuthRoute) {
+    return
+  }
 
   const isProtectedRoute = protectedRoutes.some(route =>
-    url.pathname.startsWith(route) && !url.pathname.includes('/auth/')
+    url.pathname.startsWith(route)
   )
 
   if (!isProtectedRoute) {

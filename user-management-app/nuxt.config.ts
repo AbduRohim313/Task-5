@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxt/ui'],
+
+  css: [
+    '~/assets/css/main.css'
+  ],
+
   runtimeConfig: {
     // Переменные для сервера
     jwtSecret: process.env.JWT_SECRET || 'your-secret-key',

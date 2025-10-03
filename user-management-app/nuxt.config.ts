@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   css: [
     '~/assets/css/main.css'
   ],
+
   // Настройки для Netlify deployment
   nitro: {
     preset: 'netlify'

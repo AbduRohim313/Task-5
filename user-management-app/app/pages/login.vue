@@ -121,6 +121,7 @@ const onSubmit = async (event: any) => {
       toast.add({
         title: 'Успешно!',
         description: result.message,
+        icon: 'i-heroicons-check-circle',
         color: 'success'
       })
 
@@ -130,6 +131,7 @@ const onSubmit = async (event: any) => {
       toast.add({
         title: 'Ошибка входа',
         description: result.message,
+        icon: 'i-heroicons-exclamation-triangle',
         color: 'error'
       })
     }
@@ -137,6 +139,7 @@ const onSubmit = async (event: any) => {
     toast.add({
       title: 'Ошибка',
       description: 'Произошла ошибка при входе в систему',
+      icon: 'i-heroicons-exclamation-circle',
       color: 'error'
     })
   } finally {

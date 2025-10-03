@@ -2,9 +2,9 @@
 # https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
-  command = "npm run build"
+  command = "npm install && npx prisma generate && npm run build"
   publish = ".output/public"
-  functions = ".output/server"
+  functions = ".netlify/functions-internal"
 
 [build.environment]
   NODE_VERSION = "18"

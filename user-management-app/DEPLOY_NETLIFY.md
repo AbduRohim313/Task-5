@@ -3,13 +3,12 @@
 ## ✅ Настройки Netlify (что указать):
 
 ### 🔧 Build settings:
-
 ```
 Branch to deploy: main
-Base directory: (оставить пустым)
-Build command: npm run build
-Publish directory: .output/public
-Functions directory: .netlify/functions-internal
+Base directory: user-management-app
+Build command: npm install && npx prisma generate && npm run build
+Publish directory: user-management-app/.output/public
+Functions directory: user-management-app/.netlify/functions-internal
 ```
 
 ### 📝 Environment Variables (обязательно):
